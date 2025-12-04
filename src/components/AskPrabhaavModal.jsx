@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { X, Sparkles, Lightbulb, TrendingUp, TrendingDown, Minus } from 'lucide-react';
-import KPIValueCard from './components/ai/KPIValueCard';
-import TrendSparkline from './components/ai/TrendSparkline';
-import DonutCard from './components/ai/DonutCard';
-import InsightTextBlock from './components/ai/InsightTextBlock';
-import SuggestionBox from './components/ai/SuggestionBox';
-import MiniBarChart from './components/ai/MiniBarChart';
-import { generateAIResponse } from './components/ai/aiResponseGenerator';
+import KPIValueCard from './ai/KPIValueCard';
+import TrendSparkline from './ai/TrendSparkline';
+import DonutCard from './ai/DonutCard';
+import InsightTextBlock from './ai/InsightTextBlock';
+import SuggestionBox from './ai/SuggestionBox';
+import MiniBarChart from './ai/MiniBarChart';
+import { generateAIResponse } from './ai/aiResponseGenerator';
 
 const AskPrabhaavModal = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
