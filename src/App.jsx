@@ -5,6 +5,7 @@ import DivisionDashboard from './DivisionDashboard';
 import EmployeeDashboard from './EmployeeDashboard';
 import EvidenceUpload from './EvidenceUpload';
 import AdminPanel from './AdminPanel';
+import ReportsAPAR from './ReportsAPAR';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/EmployeeDashboard" element={<EmployeeDashboard />} />
         <Route path="/upload" element={<EvidenceUpload />} />
         <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/reports" element={<ReportsAPAR />} />
       </Routes>
     </Router>
   );
