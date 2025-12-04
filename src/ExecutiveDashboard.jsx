@@ -13,6 +13,8 @@ import {
 import OrgPulse from './components/OrgPulse';
 import TopRisks from './components/TopRisks';
 import ExportAPAR from './components/ExportAPAR';
+import AskPrabhaavModal from './components/AskPrabhaavModal';
+import AskPrabhaavButton from './components/AskPrabhaavButton';
 
 // Government-grade theme
 const theme = createTheme({
@@ -75,6 +77,8 @@ const theme = createTheme({
 });
 
 const ExecutiveDashboard = () => {
+  const [isAIModalOpen, setIsAIModalOpen] = useState(false);
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ backgroundColor: 'background.default', minHeight: '100vh' }}>
@@ -120,6 +124,10 @@ const ExecutiveDashboard = () => {
           </Grid>
         </Container>
       </Box>
+
+      {/* Ask Prabhaav AI */}
+      <AskPrabhaavButton onClick={() => setIsAIModalOpen(true)} />
+      <AskPrabhaavModal isOpen={isAIModalOpen} onClose={() => setIsAIModalOpen(false)} />
     </ThemeProvider>
   );
 };
